@@ -1,0 +1,26 @@
+<html>
+<head>
+<img src="//matomo.alloc8or.re/matomo.php?idsite=6&rec=1" style="border:0;" alt="" />
+</head>
+<body>
+<script>
+	let h1 = document.createElement("h1");
+	h1.innerHTML = "Redirecting...";
+	document.body.appendChild(h1);
+
+	let path = window.location.pathname;
+	if (path.startsWith("/gta5-native-db"))
+		path = "/gta5/nativedb/";
+	else if (path.startsWith("/rdr3-native-db"))
+		path = "/rdr3/nativedb/";
+	else if (path.startsWith("/mp3-native-db"))
+		path = "/mp3/nativedb/";
+
+	const newLoc = "https://alloc8or.re" + path + window.location.search + window.location.hash;
+	setTimeout(() => window.location.replace(newLoc), 3000);	
+</script>
+<noscript>
+	<h1>Moved to <a href="https://alloc8or.re">alloc8or.re</a></h1>
+</noscript>
+</body>
+</html>
